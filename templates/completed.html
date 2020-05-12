@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    {% for item in items %}
+    <div class="row m-2 p-2" style="background-color: #343a40!important;">
+        <div class="col-9">
+            <a href="#" class="nav-link" data-toggle="modal" data-target="#completed-modal-{{item.id}}">{{ item.task }}</a>
+
+            {% include 'completed-modal.html' %}
+        </div>
+
+        <div class="col p-2">
+            <a href="{{ url_for('undone', pk=item.id) }}" style="color: orange;"><i class="fas fa-window-restore"></i></a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

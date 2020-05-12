@@ -95,6 +95,22 @@ def delete(pk):
     return redirect(url_for('todo'))
 
 
+@app.route('/completed')
+def completed():
+    items = Todo.query.filter_by(done=True).all()
+    return render_template('completed.html', items=items)
+
+
+@app.route('/undone/<int:pk>')
+def undone(pk):
+    item = Todo.query.get(pk)
+    item.done = False
+    item.completed_on = None
+    db.session.commit()
+
+    return redirect(url_for('completed'))
+
+
 """
 -------------------------------- Run App -------------------------------
 """

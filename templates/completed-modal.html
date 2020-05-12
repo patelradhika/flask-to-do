@@ -1,17 +1,22 @@
-<div class="modal fade" id="view-modal-{{item.id}}">
+<div class="modal fade" id="completed-modal-{{item.id}}">
 	<div class="modal-dialog" style="max-width: 700px;">
-		<div class="modal-content" style="margin-top: 15%; margin-left: 13.5%;">
+        <div class="modal-content" style="margin-top: 15%; margin-left: 13.5%;">
             <div class="modal-body">
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
 
                 <div class="row">
                     <div class="col-3 text-right">Task:</div>
                     <div class="col-7">{{ item.task }}</div>
-                </div>
+                </div><br>
 
                 <div class="row">
                     <div class="col-3 ml-1 text-right">Description:</div>
                     <div class="col-7">{{ item.description }}</div>
+                </div><br>
+
+                <div class="row">
+                    <div class="col-3 ml-1 text-right">Completed On:</div>
+                    <div class="col-7">{{ item.completed_on.strftime('%b %d, %Y %I:%M %p') }}</div>
                 </div>
             </div>
 		</div>
