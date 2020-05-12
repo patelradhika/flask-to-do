@@ -1,0 +1,28 @@
+#row-nav {
+    height: 100%;
+}
+
+#show-link {
+    background-color: #343a40!important;
+    max-width: 190px;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    background-color: black;
+    color: wheat;
+}
+
+#show-tasks {
+    background-image: url("https://thumbs.dreamstime.com/z/white-marble-texture-abstract-background-pattern-high-resolution-detailed-real-genuine-nature-90469737.jpg");
+}
+
+.container {
+    justify-content: space-around;
+    padding: 4rem;
+    text-align: left;
+    max-width: 70%;
+}

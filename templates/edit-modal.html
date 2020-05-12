@@ -1,0 +1,25 @@
+<div class="modal fade" id="edit-modal-{{item.id}}">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="editModal">Edit Task</h5>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+			</div>
+            <div class="modal-body">
+            	<form action="{{ url_for('edit', pk=item.id) }}" method="POST">
+            		<div class="form-group">
+            			<label for="editTask">Task</label>
+                        <input type="text" class="form-control" id="editTask" placeholder="Enter task" name="task" value="{{ item.task }}" required/>
+            		</div>
+
+                    <div class="form-group">
+                    	<label for="editDesc">Description</label>
+                        <input type="text" class="form-control" id="editDesc" placeholder="Task description" name="description" value="{{ item.description }}" />
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Update</button>
+            	</form>
+            </div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,19 @@
+<div class="modal fade" id="view-modal-{{item.id}}">
+	<div class="modal-dialog" style="max-width: 700px;">
+		<div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+
+                <div class="row">
+                    <div class="col-3 text-right">Task:</div>
+                    <div class="col-7">{{ item.task }}</div>
+                </div>
+
+                <div class="row">
+                    <div class="col-3 ml-1 text-right">Description:</div>
+                    <div class="col-7">{{ item.description }}</div>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
